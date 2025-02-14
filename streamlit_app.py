@@ -65,7 +65,7 @@ def chat_with_backend(question):
                 sources = response_data.get('sources', [])
                 
                 # Only add source information if we have good matches
-                if sources and len(answer)>200:
+                if sources and len(answer)>300:
                     source_text = "\n\nSources:"
                     for source in sources:
                         file_name = source.get('file_name', 'Unknown')
