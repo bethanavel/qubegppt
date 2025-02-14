@@ -12,10 +12,18 @@ if "messages" not in st.session_state:
 
 def get_document_names():
     """Get list of document names from the docs directory"""
-    docs_path = './docs/'
-    files = os.listdir(docs_path)
+    # docs_path = './docs/'
+    # files = os.listdir(docs_path)
     # Get base names without extensions and sort them
-    doc_names = sorted([os.path.splitext(file)[0] for file in files if file.endswith('.pdf')])
+    doc_names = ["189(23-24) LOU Suncity Cinemas, Kashipur (Uttarakhand).pdf",
+"204(23-24) LOU Sri Raja Rajeshwari Theater, Chinnasalem (Tamil Nadu).pdf",
+"205(23-24) LOU Saravana Theatre, Chennai (Tamil Nadu).pdf",
+"249(23-24) LOU Thirumurugan Thiraiarangam, Ayyampet (Tamil Nadu).pdf",
+"306(23-24) LOU Abhilash Theatre, Gauribidanur (Karnataka).pdf",
+"311(23-24) LOU Shree Shakti Talkies, Bagalkot (Karnataka).pdf",
+"350(23-24) Final Revised LOU Apsara Theatre, Chenganacherry (Kerala).pdf",
+"374(23-24) LOU Senthil Theatre, Kattuputhur (Tamil Nadu).pdf",
+"378(23-24) LOU Shive Cinema, Gangavathi (Karnataka).pdf"]
     return doc_names
 
 def chat_with_backend(question):
